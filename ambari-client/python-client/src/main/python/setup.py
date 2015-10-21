@@ -28,11 +28,13 @@ else:
 if version_info[:2] < (2, 7):
     install_requires += ['argparse']
 
+install_requires +=['mock']
+
 setup(
   name = 'ambari_client',
   author_email = "ambari-dev@incubator.apache.org",
   version = "1.0.3-SNAPSHOT",
-  packages = ['ambari_client'],
+  packages = find_packages(),
   install_requires = install_requires,
   description = 'Ambari python REST API client',
   license = 'Apache License 2.0'
